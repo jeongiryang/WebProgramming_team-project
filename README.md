@@ -1,3 +1,53 @@
+# CWNU 중고마켓
+
+To-do 목록을 중고거래 형태로 확장한 웹프로그래밍 공동 과제입니다. 물품 등록·수정·거래 상태 변경·삭제와 검색·정렬·보기 전환을 구현했습니다.
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![HTML · CSS](https://img.shields.io/badge/HTML%20%C2%B7%20CSS-E34F26?style=flat-square)
+
+[실행](#실행) · [서버](Web_team-project/todos_v4.js) · [화면 코드](Web_team-project) · [샘플 데이터](Web_team-project/simple_todos_v4.json) · [과제 보고서](#과제-보고서)
+
+| 목록 화면 | 카드 화면 |
+| --- | --- |
+| ![기존 과제 결과: 물품 목록](screenshots/1.조회%28get%29.png) | ![기존 과제 결과: 카드 보기](screenshots/12-2.보기방식_변경.png) |
+
+## 실행
+
+저장소 루트에서 의존성을 설치하고 서버 파일을 실행합니다.
+
+```bash
+npm ci
+node Web_team-project/todos_v4.js
+```
+
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 엽니다. 데이터는 서버 파일 옆의 `simple_todos_v4.json`에 저장됩니다.
+
+## 기능
+
+- 물품명과 기한을 입력해 등록하고 수정·삭제합니다.
+- 거래중·거래완료 상태를 바꾸고 상태별로 모아 봅니다.
+- 물품 검색, 마감일 정렬, 기한 초과 표시를 제공합니다.
+- 표와 카드 보기를 전환하고 입력·서버 오류를 화면에 표시합니다.
+
+## API
+
+| 요청 | 기능 |
+| --- | --- |
+| `GET /api/items` | 목록 조회 |
+| `POST /api/items` | 물품 등록 |
+| `PUT /api/items/:id` | 물품명·기한 수정 |
+| `PATCH /api/items/:id` | 거래 상태 전환 |
+| `DELETE /api/items/:id` | 물품 삭제 |
+
+정이량·황왕석의 공동 제출 과제입니다. 기능별 구현 설명과 실행 화면, 문제 해결 과정은 아래 보고서에 있습니다.
+
+## 과제 보고서
+
+<details>
+<summary>기존 과제 보고서 펼치기</summary>
+
 <h1 style="text-align:center">웹프로그래밍 프로젝트 보고서</h1>
 
 ## 1. 프로젝트 정보
@@ -419,3 +469,4 @@
 
 _황왕석, 정이량 드림_
 
+</details>
